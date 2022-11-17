@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Página de Pagamento</title>
+</head>
+<body>
+    <h3>Dados do pagamento</h3>
+    <form action="/confirmarPagamento" method="post" th:object="${usuario}">
+        Informe o número de inscrição: <input type="number" name="id" th:text="*{id}"><br/>
+        Selecione a forma de pagamento: 
+        <select>
+            <option>PIX</option>
+            <option>Dinheiro</option>
+            <option>Cartão de débito/crédito</option>
+        </select> 
+        <br/>
+        <button type="submit">Efetuar pagamento</button>
+    </form>
+</body>
+</html>

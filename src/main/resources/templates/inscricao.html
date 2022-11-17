@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inscrição - Conferência</title>
+</head>
+<body>
+
+<h3>Inscrição para o curso de Android</h3>
+<form action="/salvarUsuario" method="post" th:object="${usuario}">
+<input type="hidden" name="id" th:field="*{id}">
+	Nome: <input type="text" name="nome" placeholder="Qual seu nome?" size="40" th:field="*{nome}"> <br/>
+	Idade: <input type="text" name="idade" placeholder="Informe sua idade"  size="30" th:field="*{idade}"> <br/>
+	E-mail: <input type="text" name="email" placeholder="Digite seu e-mail para receber o certificado"  size="40" th:field="*{email}"> <br/>
+	Qual seu nível de conhecimento em JavaScript?
+	<select th:field="*{nivelJavascript}">
+		<option value="Excelente">Excelente</option>
+		<option value="Bom">Bom</option>
+		<option value="Razoável">Razoável</option>
+		<option value="Zerado">Zerado</option>
+	</select> 
+	<br/>
+	Você é estudante do IFPE? 
+	<input type="radio" value="Sim" th:field="*{matriculado}"> Sim &nbsp;&nbsp;&nbsp;
+	<input type="radio" value="Não" th:field="*{matriculado}"> Não <br/>
+	Matrícula: <input type="text" name="matricula" placeholder="Digite a matrícula" size="20" th:field="*{matricula}"> <br/>
+	Qual o seu turno?
+	<select th:field="*{turno}">
+		<option value="manhã">MANHÃ</option>
+		<option value="tarde">TARDE</option>
+		<option value="noite">NOITE</option>
+	</select> 
+	<br/>
+	<button type="submit">Realizar inscrição</button>
+</form>
+</body>
+</html>

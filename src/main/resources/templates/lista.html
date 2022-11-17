@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pessoas Inscritas</title>
+</head>
+<body>
+	<h3>Relação dos inscritos para o Curso de Android</h3>
+	<div>
+		<table style="border: 1px solid;">
+			<tr>
+				<th>Num. Inscrição</th>
+				<th>Nome</th>
+				<th>Estudante do IFPE</th>
+				<th>Pagamento realizado</th>
+			</tr>
+			<tr th:each="cont : ${listaUsuario}">
+				<td th:text="${cont.id}"></td>
+				<td th:text="${cont.nome}"></td>
+				<td th:text="${cont.matriculado}"></td>
+				<td th:text="${cont.pago}"></td>
+			</tr>
+		</table>
+	</div>
+	<h4>
+		<a href="/">Voltar para o menu</a>
+	</h4>
+</body>
+</html>
